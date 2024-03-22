@@ -37,7 +37,7 @@ class BaseHandler extends node_events_1.default {
             return this.options.generateUrl(req, {
                 proto,
                 host,
-                path: path,
+                path,
                 id,
             });
         }

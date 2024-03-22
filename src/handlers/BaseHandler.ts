@@ -46,7 +46,7 @@ export class BaseHandler extends EventEmitter {
       return this.options.generateUrl(req, {
         proto,
         host,
-        path: path,
+        path,
         id,
       })
     }

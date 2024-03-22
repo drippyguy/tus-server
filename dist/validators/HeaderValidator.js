@@ -59,7 +59,7 @@ exports.validators = new Map([
     [
         // The Tus-Version response header MUST be a comma-separated list of protocol versions supported by the Server.
         // The list MUST be sorted by Server's preference where the first one is the most preferred one.
-        'tus-version',
+        'upload-version',
         function (value) {
             // @ts-expect-error we can compare a literal
             return utils_1.TUS_VERSION.includes(value);
@@ -71,7 +71,7 @@ exports.validators = new Map([
         // If the version specified by the Client is not supported by the Server,
         // it MUST respond with the 412 Precondition Failed status and MUST include the Tus-Version header into the response.
         // In addition, the Server MUST NOT process the request.
-        'tus-resumable',
+        'upload-protocol',
         function (value) {
             return value === utils_1.TUS_RESUMABLE;
         },
